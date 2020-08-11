@@ -9,6 +9,11 @@
 
 ## The development website is under [dscvjit.now.sh](https://dscvjit.now.sh)
 
+## Firebase deploy
+* ``npm run build``
+* ``npm run export``
+* ``firebase deploy``
+
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

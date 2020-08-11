@@ -3,6 +3,7 @@ import ModalVideo from 'react-modal-video';
 
 import homeImage from '../../images/home.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from '../../utils/ActiveLink';
 
 const isServer = typeof window === 'undefined';
 const WOW = !isServer ? require('wowjs') : null;
@@ -50,6 +51,9 @@ class Banner extends React.Component {
                                             {/*<a href="https://bit.ly/3efh7Ze" className="btn btn-primary">*/}
                                             {/*    Join DSC UPT*/}
                                             {/*</a>*/}
+                                            <Link activeClassName="active" href="/form">
+                                                <a className="btn btn-primary">Join DSC UPT</a>
+                                            </Link>
 
                                             <div className="social-icons-list" style={{ marginTop: '15px' }}>
                                                 <ul className="social-list" style={{ paddingLeft: '0px' }}>

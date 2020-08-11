@@ -6,17 +6,17 @@ import Content from '../components/ContactUs/Content';
 import Form from '../components/ContactUs/Form';
 
 class Contact extends Component {
-  render() {
-    return (
-      <>
-        <Navbar />
-        <Banner />
-        <Form />
-        <Content />
-        <Footer />
-      </>
-    );
-  }
+    render() {
+        return (
+            <>
+                <Navbar />
+                <Banner />
+                <Form />
+                <Content />
+                <Footer />
+            </>
+        );
+    }
 }
 
 export default Contact;

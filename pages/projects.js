@@ -7,21 +7,21 @@ import Content from '../components/Projects/Content';
 import { getAllProjects } from '../service/service';
 
 class Projects extends React.Component {
-  static async getInitialProps(ctx) {
-    const res = await getAllProjects();
-    return { projects: res.data };
-  }
+    static async getInitialProps(ctx) {
+        const res = await getAllProjects();
+        return { projects: res.data };
+    }
 
-  render() {
-    return (
-      <>
-        <Navbar />
-        <Banner />
-        <Content projects={this.props.projects} />
-        <Footer />
-      </>
-    );
-  }
+    render() {
+        return (
+            <>
+                <Navbar />
+                <Banner />
+                <Content projects={this.props.projects} />
+                <Footer />
+            </>
+        );
+    }
 }
 
 export default Projects;

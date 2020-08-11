@@ -16,29 +16,29 @@ import React from 'react';
 import '../fontAwesome';
 
 class MyApp extends App {
-  render() {
-    const { Component, pageProps, store } = this.props;
-    return (
-      <>
-        <DefaultSeo
-          title="Developer Student Clubs VJIT"
-          description="The Developer Student Clubs website for Vidya Jyothi Institute of Technology"
-          openGraph={{
-            type: 'website',
-            locale: 'en_IE',
-            url: 'https://dscvjit.com',
-            site_name: 'DSC VJIT'
-          }}
-        />
-        <Preloader>
-          <Component {...pageProps} />
-          <GoTop scrollStepInPx="50" delayInMs="20" />
-          <Placeholder>
-            <Loader />
-          </Placeholder>
-        </Preloader>
-      </>
-    );
-  }
+    render() {
+        const { Component, pageProps, store } = this.props;
+        return (
+            <>
+                <DefaultSeo
+                    title="Developer Student Clubs UPT"
+                    description="The Developer Student Clubs website for Vidya Jyothi Institute of Technology"
+                    openGraph={{
+                        type: 'website',
+                        locale: 'en_IE',
+                        url: 'https://dsc-upt.web.app',
+                        site_name: 'DSC UPT'
+                    }}
+                />
+                <Preloader>
+                    <Component {...pageProps} />
+                    <GoTop scrollStepInPx="50" delayInMs="20" />
+                    <Placeholder>
+                        <Loader />
+                    </Placeholder>
+                </Preloader>
+            </>
+        );
+    }
 }
 export default MyApp;

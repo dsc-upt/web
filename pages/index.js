@@ -10,22 +10,22 @@ import FAQ from '../components/Home/FAQ';
 import NoSSR from 'react-no-ssr';
 
 class Index extends React.Component {
-  render() {
-    return (
-      <>
-        <Navbar />
-        <Banner />
-        <Overview />
-        <Technologies />
-        <NoSSR>
-          <RecentProjects />
-        </NoSSR>
-        <IdeaForm />
-        <FAQ />
-        <Footer />
-      </>
-    );
-  }
+    render() {
+        return (
+            <>
+                <Navbar />
+                <Banner />
+                <Overview />
+                <Technologies />
+                {/*<NoSSR>*/}
+                {/*    <RecentProjects />*/}
+                {/*</NoSSR>*/}
+                <IdeaForm />
+                <FAQ />
+                <Footer />
+            </>
+        );
+    }
 }
 
 export default Index;

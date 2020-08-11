@@ -2,14 +2,14 @@ import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDWC-O6tAzaKjyPGY20uDJachxggnVjI9g',
-  authDomain: 'admin-dsc-vjit.firebaseapp.com',
-  databaseURL: 'https://admin-dsc-vjit.firebaseio.com',
-  projectId: 'admin-dsc-vjit',
-  storageBucket: 'admin-dsc-vjit.appspot.com',
-  messagingSenderId: '195464616055',
-  appId: '1:195464616055:web:90d9bf4ae970c362c94e72',
-  measurementId: 'G-T4C6B4S4P9'
+  apiKey: 'AIzaSyApB04_-2R3jflCtAL4-9T_DO_qE5ngT4k',
+  authDomain: 'dsc-upt.firebaseapp.com',
+  databaseURL: 'https://dsc-upt.firebaseio.com',
+  projectId: 'dsc-upt',
+  storageBucket: 'dsc-upt.appspot.com',
+  messagingSenderId: '1004294201218',
+  appId: '1:1004294201218:web:d46e92c65cb171d756399b',
+  measurementId: 'G-CDKMWCKB9J'
 };
 
 //place the config here

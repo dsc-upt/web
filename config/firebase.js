@@ -11,10 +11,16 @@ const firebaseConfig = {
     appId: '1:1004294201218:web:d46e92c65cb171d756399b',
     measurementId: 'G-CDKMWCKB9J'
 };
-
+firebase.initializeApp(firebaseConfig);
+firebase
+    .firestore()
+    .enablePersistence({ synchronizeTabs: !0 })
+    .catch(() => {
+        console.warn('DB offline support not available');
+    });
 //place the config here
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
+// if (!firebase.apps.length) {
+//     firebase.initializeApp(firebaseConfig);
+// }
 export const db = firebase.firestore();
 export default firebase;

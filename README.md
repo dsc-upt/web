@@ -1,13 +1,11 @@
-# Developer Students Club VJIT Website
+# Developer Students Club UPT Website
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## To run the website locally:
-- Install all of the dependencies by doing **yarn install**
-- After the installation of all the dependencies, start the local server by using **yarn dev**
-
-## The development website is under [dscvjit.now.sh](https://dscvjit.now.sh)
+- Install all of the dependencies by doing ``npm install``
+- After the installation of all the dependencies, start the local server by using ``npm run dev``
 
 ## Firebase deploy
 * ``npm run build``

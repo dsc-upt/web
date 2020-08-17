@@ -1,6 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import * as emailjs from 'emailjs-com';
 
 function IdeaForm() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [branch, setBranch] = useState('');
+    const [year, setYear] = useState('');
+    const [idea, setIdea] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    emailjs.init('user_M4xFRYqZzfYr5bqw2Td0y');
+
+    function handleSubmit() {
+        if (name === '' || name === undefined) {
+            setError('Name field is empty!');
+            return;
+        }
+
+        if (email === '' || email === undefined) {
+            setError('Email field is empty!');
+            return;
+        }
+
+        if (branch === '' || branch === undefined) {
+            setError('Branch field is empty!');
+            return;
+        }
+
+        if (year === '' || year === undefined) {
+            setError('Year field is empty');
+            return;
+        }
+
+        if (idea === '' || idea === undefined) {
+            setError('Idea field is empty');
+            return;
+        }
+        setLoading(true);
+        const templateId = 'template_WqJ0qH73';
+        const variables = {
+            from_name: name,
+            from_email: email,
+            reply_to: email,
+            branch: branch,
+            year: year,
+            idea: idea
+        };
+        emailjs.send('gmail', templateId, variables).then((res) => {
+            console.log('Email sent! ', res);
+            setName('');
+            setEmail('');
+            setBranch('');
+            setYear('');
+            setIdea('');
+            setError('');
+            setLoading(false);
+        });
+        console.log(name, email, branch, year, idea);
+    }
+
     return (
         <section className="idea-form ptb-100 bg-gray">
             <div className="container">
@@ -20,12 +78,12 @@ function IdeaForm() {
                                 <p className="mb-1">
                                     if(
                                     <b>
-                                        !idea.includes("technicalKnowledge" || "developers" ||
+                                        idea.includes("technicalKnowledge" || "developers" ||
                                         {'  '}"domainKnowledge" || "designers "{' '}
                                     </b>
                                     ){' { '}
                                 </p>
-                                <p className="ml-4">
+                                <p className="ml-4 mb-0">
                                     <b>submitIdea();</b>
                                 </p>
                                 <p className="mb-1">{' } '}</p>
@@ -40,28 +98,62 @@ function IdeaForm() {
                         <div className="analysis-form">
                             <form>
                                 <div className="form-group">
-                                    <input type="text" placeholder="Name*" className="form-control" />
+                                    <input
+                                        required={true}
+                                        placeholder="Name*"
+                                        className="form-control"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="email" placeholder="Email*" className="form-control" />
+                                    <input
+                                        required
+                                        type="email"
+                                        placeholder="Email*"
+                                        className="form-control"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" placeholder="Branch*" className="form-control" />
+                                    <input
+                                        required
+                                        placeholder="Branch*"
+                                        className="form-control"
+                                        value={branch}
+                                        onChange={(e) => setBranch(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" placeholder="Year*" className="form-control" />
+                                    <input
+                                        required
+                                        placeholder="Year*"
+                                        className="form-control"
+                                        value={year}
+                                        onChange={(e) => setYear(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" placeholder="Idea*" className="form-control" />
+                                    <textarea
+                                        placeholder="Idea*"
+                                        className="form-control"
+                                        required={true}
+                                        value={idea}
+                                        onChange={(e) => setIdea(e.target.value)}
+                                    />
                                 </div>
-
-                                <button type="submit" className="btn btn-primary">
-                                    Submit Idea
-                                </button>
+                                <span style={{ color: 'red' }}>{error}</span>
+                                <input
+                                    value={loading ? 'Sending...' : 'Submit Idea'}
+                                    type="button"
+                                    onClick={handleSubmit}
+                                    className="btn btn-primary"
+                                />
                             </form>
                         </div>
                     </div>

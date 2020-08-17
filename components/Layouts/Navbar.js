@@ -104,11 +104,11 @@ class Navbar extends React.Component {
                                                 <a className="nav-link">Events</a>
                                             </Link>
                                         </li>
-                                        <li className="nav-item">
-                                            <Link activeClassName="active" href="/projects">
-                                                <a className="nav-link">Projects</a>
-                                            </Link>
-                                        </li>
+                                        {/*<li className="nav-item">*/}
+                                        {/*    <Link activeClassName="active" href="/projects">*/}
+                                        {/*        <a className="nav-link">Projects</a>*/}
+                                        {/*    </Link>*/}
+                                        {/*</li>*/}
 
                                         <li className="nav-item">
                                             <Link activeClassName="active" href="/team">

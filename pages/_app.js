@@ -14,12 +14,17 @@ import GoTop from '../components/Shared/GoTop';
 import Loader from '../components/Shared/Loader';
 import React from 'react';
 import '../fontAwesome';
+import Head from 'next/head';
 
 class MyApp extends App {
     render() {
         const { Component, pageProps, store } = this.props;
         return (
             <>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                    <title>DSC UPT</title>
+                </Head>
                 <DefaultSeo
                     title="Developer Student Clubs UPT"
                     description="The Developer Student Clubs website for Vidya Jyothi Institute of Technology"

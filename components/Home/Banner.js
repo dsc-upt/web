@@ -45,15 +45,12 @@ class Banner extends React.Component {
                                                 Developer Student Clubs are university based community groups for
                                                 students interested in Google developer technologies. Students from all
                                                 undergraduate or graduate programs with an interest in growing as a
-                                                developer are welcome.
+                                                developer are welcome!
                                             </p>
 
-                                            {/*<a href="https://bit.ly/3efh7Ze" className="btn btn-primary">*/}
-                                            {/*    Join DSC UPT*/}
-                                            {/*</a>*/}
-                                            <Link activeClassName="active" href="/form">
-                                                <a className="btn btn-primary">Join DSC UPT</a>
-                                            </Link>
+                                            {/*<Link activeClassName="active" href="/form">*/}
+                                            {/*    <a className="btn btn-primary">Join DSC UPT</a>*/}
+                                            {/*</Link>*/}
 
                                             <div className="social-icons-list" style={{ marginTop: '15px' }}>
                                                 <ul className="social-list" style={{ paddingLeft: '0px' }}>

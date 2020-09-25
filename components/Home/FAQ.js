@@ -6,6 +6,7 @@ import {
     AccordionItemHeading,
     AccordionItemPanel
 } from 'react-accessible-accordion';
+import Link from "../../utils/ActiveLink";
 
 function FAQ() {
     return (
@@ -13,7 +14,7 @@ function FAQ() {
             <div className="container">
                 <div className="section-title">
                     <h2>FAQ</h2>
-                    <div className="bar" />
+                    <div className="bar"/>
                     <p>The below are some of the frequently asked questions by the students</p>
                 </div>
                 <div className="faq-accordion">
@@ -21,7 +22,7 @@ function FAQ() {
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
-                                    I am not from CSE branch, Can I join DSC UPT ?
+                                    I am not from CS branch, can I join DSC UPT ?
                                 </AccordionItemButton>
                             </AccordionItemHeading>
                             <AccordionItemPanel>
@@ -33,7 +34,7 @@ function FAQ() {
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
-                                    I am from first year branch, Am I allowed to join ?
+                                    I am from first year branch, am I allowed to join ?
                                 </AccordionItemButton>
                             </AccordionItemHeading>
                             <AccordionItemPanel>
@@ -51,7 +52,12 @@ function FAQ() {
                             <AccordionItemPanel>
                                 <p className="accordion-content">
                                     No worries, we constantly looking for people who will help us as volunteers during
-                                    the events, workshops and would love to have you on the team
+                                    the events, workshops and would love to have you on the team! Let us know your
+                                    intentions filling the form from{' '}
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>{' '}
+                                    page
                                 </p>
                             </AccordionItemPanel>
                         </AccordionItem>

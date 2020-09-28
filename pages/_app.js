@@ -15,6 +15,7 @@ import Loader from '../components/Shared/Loader';
 import React from 'react';
 import '../fontAwesome';
 import Head from 'next/head';
+import homeImage from '../images/home.webp';
 
 class MyApp extends App {
     render() {
@@ -27,12 +28,18 @@ class MyApp extends App {
                 </Head>
                 <DefaultSeo
                     title="Developer Student Clubs UPT"
-                    description="The Developer Student Clubs website for Vidya Jyothi Institute of Technology"
+                    description="Build good things, together"
                     openGraph={{
                         type: 'website',
-                        locale: 'en_IE',
+                        locale: 'en_US',
                         url: 'https://dsc-upt.web.app',
-                        site_name: 'DSC UPT'
+                        site_name: 'DSC UPT',
+                        images: [
+                            {
+                                url: homeImage,
+                                alt: 'DSC UPT Home Page Image'
+                            }
+                        ]
                     }}
                 />
                 <Preloader>
@@ -46,4 +53,5 @@ class MyApp extends App {
         );
     }
 }
+
 export default MyApp;

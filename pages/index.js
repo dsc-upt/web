@@ -5,9 +5,7 @@ import Banner from '../components/Home/Banner';
 import Technologies from '../components/Home/Technologies';
 import Overview from '../components/Home/Overview';
 import IdeaForm from '../components/Home/IdeaForm';
-import RecentProjects from '../components/Home/RecentProjects';
 import FAQ from '../components/Home/FAQ';
-import NoSSR from 'react-no-ssr';
 
 class Index extends React.Component {
     render() {
